@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="32dp"
+    tools:context=".InstructionsActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvInstructionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="📖 INSTRUCCIONES DE TRIVIA TV"
+        android:textColor="#00E5FF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Instructions Card -->
+    <LinearLayout
+        android:id="@+id/layoutInstructionsCard"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_background"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstructionsTitle">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="🕹️ 1. Navegación con Control Remoto:\n• Usa las flechas (D-pad) para moverte entre las opciones, categorías y botones.\n• El elemento seleccionado se resaltará con un borde brillante.\n• Presiona el botón OK o Central para seleccionar una opción."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="⏱️ 2. Dinámica del Juego:\n• Cada partida consta de 5 preguntas de la categoría elegida.\n• Tienes un temporizador de 15 segundos por cada pregunta.\n• Si el tiempo se agota, la pregunta contará como incorrecta."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏆 3. Puntuación:\n• Cada respuesta correcta otorga 100 puntos.\n• ¡Supera tu mejor puntuación guardada localmente en tu televisor!"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="⬅ REGRESAR"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutInstructionsCard" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
